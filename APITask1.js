@@ -11,6 +11,7 @@ async function getWord(word) {
   const wordinfo = [] = await getWord(val);
       console.log (wordinfo);
       console.log (wordinfo[0].word);
+    
     document.getElementById('origin').innerHTML = wordinfo[0].origin
   const wd = document.getElementById("lists");
   wd.innerHTML = ''
@@ -21,6 +22,9 @@ async function getWord(word) {
     li.innerHTML = meanings[i].definitions[0].definition;
     console.log(li)
     wd.appendChild(li)
+
+    document.getElementById('subtitle1').setAttribute ("style","color: blue");
+    document.getElementById('subtitle2').setAttribute ("style","color: blue");
   }
 
 } 
